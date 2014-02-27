@@ -1,1 +1,15 @@
-foo
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Me page</title>
+</head>
+<body>
+	<h1>About me</h1>
+	<ul>
+	<% %w[apples, oranges, bananas].each do |fruit| %>
+		<li>I like to eat <%= fruit %></li>
+	<% end %>
+	</ul>
+	<p>This is a random paragraph. Yipee.</p>
+</body>
+</html>
