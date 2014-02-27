@@ -9,7 +9,17 @@
   <head>
     <title>I'm the title</title>
   </head>
-    <h1>I am using a layout</h1>
+      <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+        Hello there <%= @request.query['first_name'] %>
+      <% else %>
+        Enter thy information
+      <% end %>
+       <% if @request.query['gender'] && !@request.query['gender'].empty? %>
+        You say you are <%= @request.query['gender'] %>
+      <% else %>
+        Enter thy name and information
+      <% end %>
+    
     <h2>The time is <%= Time.now %></h2>
     <p>
       <h3> I'm a header.</h3>
@@ -17,7 +27,14 @@
       <%= link_to 'Me', '#' %>
       <%= link_to 'This is a link to google', 'http://google.com' %>
     </p>
-    <hr />
+    <hr>
+      <form method='post' action="<%= @request.path %>">
+            First name: <input type="text" name="first_name" placeholder='first name'/><br />
+            Gender: <input type="radio" name="gender" value="male">Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <input type="radio" name="gender" value="other">Other<br>
+            <input type="submit" value="Submit" />
+      </form>
     <div>
       <%= yield %>
     </div>

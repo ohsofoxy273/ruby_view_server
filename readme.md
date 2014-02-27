@@ -214,7 +214,7 @@ This will display the current time. If you refresh your page your time should ch
 
 ## 6) Talking to your Server
 
-You've been sending your server data and you didn't even know it. Whey you visit http://localhost:8000/index in the browser the server gets the url that you typed in and sees that you're looking for the `/index` path. What if we wanted our server to do something more interesting, send it more data, like a facebook status update...how do we do that?
+You've been sending your server data and you didn't even know it. When you visit http://localhost:8000/index in the browser the server gets the url that you typed in and sees that you're looking for the `/index` path. What if we wanted our server to do something more interesting, send it more data, like a facebook status update...how do we do that?
 
 
 ### Methods of sending data to servers
